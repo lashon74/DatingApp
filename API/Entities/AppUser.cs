@@ -4,5 +4,6 @@ namespace API.Entities
     {
         public int Id { get; set; }
         public required string UserName { get; set; } 
+        public required DateTime Birthday { get; set; } 
     }
 }
