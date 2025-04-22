@@ -1,6 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using API.Data;
+using API.DTOs;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,31 @@ namespace API.Controllers
              await context.SaveChangesAsync();
 
              return user;
+        }
+
+        [HttpPost("Login")]
+        public async Task<ActionResult<AppUser>>  Login(LoginDto loginDto)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
+
+            if(user == null) 
+            {
+                return Unauthorized("Invalid username");
+            } 
+             
+            using var hmac = new HMACSHA512(user.PasswordSalt);
+
+            var computedHash =  hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
+
+            for (int i = 0; i < computedHash.Length; i++)
+            {
+            if (computedHash[i] != user.PasswordHash[i])
+            {
+                return Unauthorized("Invalid password");
+            }
+            }
+           
+                return user;
         }
 
         //checking to see if a duplicate username is being used
