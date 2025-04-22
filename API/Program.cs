@@ -1,4 +1,6 @@
 using API.Data;
+using API.Interfaces;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddDbContext<DataContext>(opt =>{
 
 });
 builder.Services.AddCors();//needed to connect both projects 
+builder.Services.AddScoped <ITokenService, TokenService>(); //added once per client request common practice to use interface then a class that uses it 
 
 var app = builder.Build();
 
