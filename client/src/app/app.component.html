@@ -1,1 +1,5 @@
 <h1>{{ title }}</h1>
+<ul>
+  <!-- Used to loop over things in angular -->
+  <li *ngFor="let user of users">{{ user.id }} - {{ user.userName }}</li>
+</ul>
