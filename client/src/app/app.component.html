@@ -1,5 +1,9 @@
 <h1>{{ title }}</h1>
 <ul>
   <!-- Used to loop over things in angular -->
-  <li *ngFor="let user of users">{{ user.id }} - {{ user.userName }}</li>
+  <!-- <li *ngFor="let user of users">{{ user.id }} - {{ user.userName }}</li> -->
+  @for (user of users; track user.id) {
+
+  <li>{{ user.id }} {{ user.userName }}</li>
+  }
 </ul>
