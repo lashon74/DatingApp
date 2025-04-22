@@ -151,3 +151,8 @@ C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\r
 C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\obj\Debug\net9.0\API.csproj.AssemblyReference.cache
 C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\obj\Debug\net9.0\API.sourcelink.json
 C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\obj\Debug\net9.0\API.csproj.Up2Date
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
