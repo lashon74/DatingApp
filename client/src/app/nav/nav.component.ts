@@ -12,21 +12,20 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 })
 export class NavComponent {
   //injecting into component loggedin state is false by default
-  private accountService = inject(AccountService);
-  loggedIn = false;
+  accountService = inject(AccountService);
+
   model: any = {};
 
   login() {
     this.accountService.login(this.model).subscribe({
       next: (response) => {
         console.log(response);
-        this.loggedIn = true;
       },
       error: (error) => console.log(error),
     });
   }
 
   logout() {
-    this.loggedIn = false;
+    this.accountService.logout();
   }
 }
