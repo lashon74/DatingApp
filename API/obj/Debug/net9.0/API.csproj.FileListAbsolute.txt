@@ -156,3 +156,6 @@ C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\M
 C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\lasho\source\repos\WebDev\NeilCummings\DatingApp\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
