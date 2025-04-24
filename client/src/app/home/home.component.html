@@ -16,7 +16,11 @@
       <div class="row justify-content-cent">
         <div class="col-4">
           <!-- this is how to pass a property down -->
-          <app-register [usersFromHomeComponent]="users"></app-register>
+          <!-- input properties recieve using [] and output using "" -->
+          <app-register
+            [usersFromHomeComponent]="users"
+            (cancelRegister)="cancelRegisterMode($event)"
+          ></app-register>
         </div>
       </div>
     </div>
