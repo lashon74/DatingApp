@@ -1,5 +1,6 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AccountService } from '../_services/account.service';
 
 @Component({
   selector: 'app-register',
@@ -11,13 +12,19 @@ import { FormsModule } from '@angular/forms';
 export class RegisterComponent {
   //using this decorator and property to pass down child components
   // we use input signal to register input withing propertity in html
-  usersFromHomeComponent = input.required<any>();
-
+  // usersFromHomeComponent = input.required<any>();
   cancelRegister = output<boolean>();
   model: any = {};
+  private accountService = inject(AccountService);
 
   register() {
-    console.log(this.model);
+    this.accountService.register(this.model).subscribe({
+      next: (response) => {
+        console.log(response);
+        this.cancel();
+      },
+      error: (error) => console.log(error),
+    });
   }
 
   cancel() {
